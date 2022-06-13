@@ -135,7 +135,7 @@ btnRoll.addEventListener('click', () => {
   const player0playing = whosPlayin(player0);
   const player1playing = whosPlayin(player1);
   var StillPlaying =
-    Number(score0.textContent) < 5 && Number(score1.textContent) < 5;
+    Number(score0.textContent) < 100 && Number(score1.textContent) < 100;
   console.log(StillPlaying);
   btnHold.addEventListener('click', () => {
     if (player0playing) {
@@ -216,7 +216,7 @@ btnRoll.addEventListener('click', () => {
 // --------------------------------FunctionWinner---------------------------------------
 
 function winner() {
-  if (score0.textContent >= 5) {
+  if (score0.textContent >= 100) {
     divWinner.classList.add('show');
     playerWinner.textContent = 'Congrats PLAYER 1 you win';
   } else if (score1.textContent >= 5) {
